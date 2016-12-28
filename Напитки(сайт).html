@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="utf-8"> 
+		<link href="Внешние стили(сайт).css" rel="stylesheet">
+		<link href="Внешние стили(сайт).css" rel="stylesheet">
+		<link href="Внешние стили(сайт).css" rel="stylesheet">
+			<link href="wicart.css" rel="stylesheet">
+		<script src="Скрипты(сайт).js"></script>
+		<title>Пиццерия «Buon appetito!»</title>
+		<script src="wicart.js"  type="text/javascript" ></script>
+		<script src="http://code.jquery.com/jquery-1.11.0.min.js" type="text/javascript" ></script>
+		<title>Пиццерия «Buon appetito!»</title>
+	</head>
+	<body><script>
+var priceList = {
+	"001" : {"id" : "001", "subid" : {}, "name" : "Пицца-ролл", "price" : "99"},
+	"002" : {"id" : "002", "subid" : {}, "name" : "Картофельные дольки", "price" : "124"},
+	"003" : {"id" : "003", "subid" : {}, "name" : "Салат Цезарь", "price" : "299"},
+	"004" : {"id" : "004", "subid" : {}, "name" : "Чесночный хлеб", "price" : "119"},
+	"005" : {"id" : "005", "subid" : {}, "name" : "Куриные стрипсы", "price" : "149"},
+	"006" : {"id" : "006", "subid" : {}, "name" : "Цезарь", "price" : "449"},
+	"007" : {"id" : "007", "subid" : {}, "name" : "Пепперони", "price" : "399"},
+	"008" : {"id" : "008", "subid" : {}, "name" : "Гавайская", "price" : "399"},
+	"009" : {"id" : "009", "subid" : {}, "name" : "Любители овощей", "price" : "399"},
+	"010" : {"id" : "010", "subid" : {}, "name" : "Маргарита", "price" : "299"},
+	"011" : {"id" : "011", "subid" : {}, "name" : "Кока-кола", "price" : "79"},
+	"012" : {"id" : "012", "subid" : {}, "name" : "Фанта", "price" : "79"},
+	"013" : {"id" : "013", "subid" : {}, "name" : "Спрайт", "price" : "79"},
+	"014" : {"id" : "014", "subid" : {}, "name" : "Холодный чай", "price" : "99"},
+	"015" : {"id" : "015", "subid" : {}, "name" : "Сок Добрый", "price" : "119"}
+	
+	};
+</script>	
+	<div class="cart">
+<div class="price"><a href="#" id="basketwidjet" onclick="cart.showWinow('bcontainer', 1)"></a></div>
+
+<div style="text-align: center"><a href="#!" onclick="cart.clearBasket()">Очистить корзину</a></div>
+
+</div><!---Форма для магазина-------------------------------->
+<div id="order" class="popup">
+<a href="#" onclick="cart.closeWindow('order', 0)" style="float:right">[закрыть]</a>
+<h4>Введите ваши контактные данные</h4>
+
+<form id="formToSend">
+<input id="fio" type="text" placeholder="Ваши фамилия и имя"  class="" />
+<input id="city" type="text" placeholder="Город"  class="text-input"/>
+<input id="phone" type="text" placeholder="Контактный телефон" class="text-input"/>
+<input id="email" type="text" placeholder="Электронная почта" class="" />
+<br>
+<textarea id="question" placeholder="Адрес"></textarea>
+</form>
+<button onclick="cart.sendOrder('formToSend,overflw,bsum');" href="#">Отправить заказ</button>
+</div>
+<!----------------------------------------------------->
+
+<script>
+var cart;
+var config;
+var wiNumInputPrefID;
+/* WI-GLOBAL-VARS */
+$(document).ready(function(){  
+    cart = new WICard("cart");
+    config = {'clearAfterSend':true, 'showAfterAdd':false};
+    
+    cart.init("basketwidjet", config);
+    /* WI-MODULES */
+    
+    
+});	
+document.addEventListener('visibilitychange', function(e) {
+cart.init("basketwidjet", config);
+}, false);
+</script>
+		
+		<div class="top">
+			<div class="name">Buon appetito!</div>
+			<div class="main-menu1">
+				<ul class="main-menu2">
+					<li style="margin-left:44px"><a href="Главная(сайт).html">Главная</a></li> 
+					<li>
+						<a href="">Меню</a>
+						<ul class="submenu">
+							<li><a href="Пицца(сайт).html">Пицца</a></li>
+							<li><a href="Закуски(сайт).html">Закуски</a></li>
+							<li><a href="Напитки(сайт).html">Напитки</a></li>
+						</ul>
+					</li>
+					<li><a href="Доставка(сайт).html">Доставка</a></li>
+					<li><a href="Контакты(сайт).html">Контакты</a></li>
+					<li><a href="Фотогалерея(сайт).html">Фотогалерея</a></li>
+					<li><a href="Акции(сайт).html">Акции</a></li>
+					<li><a href="Регистрация(сайт).html">Регистрация</a></li>
+					<li><a href="Вакансии(сайт).html">Вакансии</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="table">
+			<table>
+				<tr>
+					<td class="pic"><img src="https://oop.pizzahut.ru/product_pics/main//1/4ab6e5bed7cb166355b3a09398aff2ad.png" width="95%" height="20%"></td>
+					<td><b>Кока-кола</b><br>Напиток газированный<br><b>79p</b><div class="v">
+<!-- WI-VETRINE[002] -->	
+<button id="wicartbutton_011" onclick="cart.addToCart(this, '011', priceList['011'])">Добавить в корзину</button>
+</div></td>
+				</tr>
+				<tr>
+					<td class="pic"><img src="https://oop.pizzahut.ru/product_pics/main//1/eea7f9cb67e50471bc950156ccbcd5eb.png" width="95%" height="20%"></td>
+					<td><b>Фанта</b><br>Напиток газированный<br><b>79p</b><div class="v">
+<!-- WI-VETRINE[002] -->	
+<button id="wicartbutton_012" onclick="cart.addToCart(this, '012', priceList['012'])">Добавить в корзину</button>
+</div></td>
+				</tr>
+				<tr>
+					<td class="pic"><img src="https://oop.pizzahut.ru/product_pics/main//1/c837be1296cdbc253cd8ac9e65348ad1.png" width="95%" height="20%"></td>
+					<td><b>Спрайт</b><br>Напиток газированный<br><b>79p</b><div class="v">
+<!-- WI-VETRINE[002] -->	
+<button id="wicartbutton_013" onclick="cart.addToCart(this, '013', priceList['013'])">Добавить в корзину</button>
+</div></td>
+				</tr>
+				<tr>
+					<td class="pic"><img src="https://oop.pizzahut.ru/product_pics/main//1/89e43b106cff5255e66618c97011d2d2.png" width="95%" height="20%"></td>
+					<td><b>Холодный чай</b><br>Холодный чай «Nestea»<br><b>99p</b><div class="v">
+<!-- WI-VETRINE[002] -->	
+<button id="wicartbutton_014" onclick="cart.addToCart(this, '014', priceList['014'])">Добавить в корзину</button>
+</div></td>
+				</tr>
+				<tr>
+					<td class="pic"><img src="https://oop.pizzahut.ru/product_pics/main//1/45d386368b5c52bf02c9f31d22665259.png" width="95%" height="20%"></td>
+					<td><b>Сок «Добрый»</b><br>Апельсиновый, яблочный, мультифрукт<br><b>119p</b><div class="v">
+<!-- WI-VETRINE[002] -->	
+<button id="wicartbutton_015" onclick="cart.addToCart(this, '015', priceList['015'])">Добавить в корзину</button>
+</div></td>
+				</tr>
+			</table>
+		</div>		
+			
+	</body>
+</html>
