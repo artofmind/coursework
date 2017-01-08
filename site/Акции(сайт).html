@@ -1,4 +1,4 @@
-!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html"; charset="utf-8" > 
@@ -13,7 +13,7 @@
 				<ul class="main-menu2">
 					<li style="margin-left:44px"><a href="Главная(сайт).html">Главная</a></li> 
 					<li>
-						<a href="">Меню</a>
+						<a href="" >Меню</a>
 						<ul class="submenu">
 							<li><a href="Пицца(сайт).html">Пицца</a></li>
 							<li><a href="Закуски(сайт).html">Закуски</a></li>
@@ -24,8 +24,6 @@
 					<li><a href="Контакты(сайт).html">Контакты</a></li>
 					<li><a href="Фотогалерея(сайт).html">Фотогалерея</a></li>
 					<li><a href="Акции(сайт).html">Акции</a></li>
-					
-			
 					
 					<li>
 						<a href="Регистрация(сайт).html">Регистрация</a>
@@ -38,18 +36,15 @@
 				</ul>
 			</div>
 		</div>
-		<div class="registry">
-			<h1>Авторизация</h1>
-			<form action="" method="post" name="send_info">
-				<label for="login">Ваш логин (email):</label>
-				<br><input type="text" name="login" id="login">
-				<div id='message1'>Неверный ввод данных адреса почты!</div>
-				<br><label for="password">Пароль:</label>
-				<br><input type="password" name="password" id="password">
-				<div id='message'>Пароль содержит недопустимые символы!</div>
-				
-				<br><input type="button" value="Войти" onclick="send2('send_info')">
-			</form>
+		<div class="action">
+			<img src="http://img.pizzahut.ru/actions/2+1.jpg" width="70%" height="50%">
+			<p id="button" onclick="op_act1()">Подробнее</p>
+			<p  id="action1">Купи 2 пиццы диаметром 30 см, введи код ТРИ ПИЦЦЫ - получи Маргариту или Грибную на Cупертесте в подарок! Акция действует 
+			до 30.11.15 и не суммируется с другими предложениями. ПРОМО-пицца в акции не участвует.</p>
+			<img src="http://img.pizzahut.ru/coupons/roll_new.jpg" width="70%" height="50%">
+			<p id="button" onclick="op_act2()">Подробнее</p>
+			<p  id="action2">Зарегистрируйся на нашем сайте, подключи рассылку и получи код на 2 пицца-ролла при заказе на любую сумму! Акция действует 
+			до 31.12.15 и не суммируется с другими предложениями.</p>
 		</div>		
 			
 	</body>
