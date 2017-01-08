@@ -33,6 +33,7 @@ function send(form_name){
 	else {document.forms[form_name].submit();}
 }
 
+
 //Доставка
 var d=new Date();
 var day=d.getDate();
