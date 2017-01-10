@@ -19,23 +19,20 @@ from ..models import (
     )
 
 
-def usage(argv):
-    commd = os.path.basename(argv[0])
+def usage(arg):
+    commd = os.path.basename(arg[0])
     print('usage: %s <config_uri> [var=value]\n'
-          '(example: "%s development.ini")' % (commd, commd))
+          '(example: "%s dev.ini")' % (commd, commd))
     sys.exit(1)
 
 
-def main(argv=sys.argv):
-    if len(argv) < 2:
-        usage(argv)
-    config_uri = argv[1]
-    options = parse_vars(argv[2:])
+def main(arg=sys.argv):
+    if len(arg) < 2:
+        usage(arg)
+    config_uri = arg[1]
+    options = parse_vars(arg2:])
     setup_logging(config_uri)
     settings = get_appsettings(config_uri, options=options)
     engine = engine_from_config(settings, 'sqlalchemy.')
     DBSession.configure(bind=engine)
     Base.metadata.create_all(engine)
-    # with transaction.manager:
-    #     model = MyModel(name='one', value=1)
-    #     DBSession.add(model)
