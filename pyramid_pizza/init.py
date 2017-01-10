@@ -21,8 +21,11 @@ def main(global_config, **settings):
     return config.make_wsgi_app()
 
 if __name__ == '__main__':
-    config = Configurator()
+    from pyramid.session import SignedCookieSessionFactory
+    my_session_factory = SignedCookieSessionFactory('itsaseekreet')
+    config = Configurator(session_factory=my_session_factory)
     config.include(database_settings)
+    config.include(sacrud_settings)
     app = config.make_wsgi_app()
     server = make_server('0.0.0.0', 6543, app)
     server.serve_forever()
