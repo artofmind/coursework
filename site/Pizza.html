@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset="utf-8">
+		<link href="Âíåøíèå ñòèëè(ñàéò).css" rel="stylesheet">
+		<link href="Âíåøíèå ñòèëè(ñàéò).css" rel="stylesheet">
+			<link href="wicart.css" rel="stylesheet">
+		<script src="Ñêðèïòû(ñàéò).js"></script>
+		<title>Ïèööåðèÿ «Buon appetito!»</title>
+		<script src="wicart.js"  type="text/javascript" ></script>
+		<script src="http://code.jquery.com/jquery-1.11.0.min.js" type="text/javascript" ></script>
+		<title>Ïèööåðèÿ «Buon appetito!»</title>
+	</head>
+	<body><script>
+var priceList = {
+	"001" : {"id" : "001", "subid" : {}, "name" : "Ïèööà-ðîëë", "price" : "99"},
+	"002" : {"id" : "002", "subid" : {}, "name" : "Êàðòîôåëüíûå äîëüêè", "price" : "124"},
+	"003" : {"id" : "003", "subid" : {}, "name" : "Ñàëàò Öåçàðü", "price" : "299"},
+	"004" : {"id" : "004", "subid" : {}, "name" : "×åñíî÷íûé õëåá", "price" : "119"},
+	"005" : {"id" : "005", "subid" : {}, "name" : "Êóðèíûå ñòðèïñû", "price" : "149"},
+	"006" : {"id" : "006", "subid" : {}, "name" : "Öåçàðü", "price" : "449"},
+	"007" : {"id" : "007", "subid" : {}, "name" : "Ïåïïåðîíè", "price" : "399"},
+	"008" : {"id" : "008", "subid" : {}, "name" : "Ãàâàéñêàÿ", "price" : "399"},
+	"009" : {"id" : "009", "subid" : {}, "name" : "Ëþáèòåëè îâîùåé", "price" : "399"},
+	"010" : {"id" : "010", "subid" : {}, "name" : "Ìàðãàðèòà", "price" : "299"},
+	};
+</script>	
+	<div class="cart">
+<div class="price"><a href="#" id="basketwidjet" onclick="cart.showWinow('bcontainer', 1)"></a></div>
+
+<div style="text-align: center"><a href="#!" onclick="cart.clearBasket()">Î÷èñòèòü êîðçèíó</a></div>
+
+</div><!---Ôîðìà äëÿ ìàãàçèíà-------------------------------->
+<div id="order" class="popup">
+<a href="#" onclick="cart.closeWindow('order', 0)" style="float:right">[çàêðûòü]</a>
+<h4>Ââåäèòå âàøè êîíòàêòíûå äàííûå</h4>
+
+<form id="formToSend">
+<input id="fio" type="text" placeholder="Âàøè ôàìèëèÿ è èìÿ"  class="" />
+<input id="city" type="text" placeholder="Ãîðîä"  class="text-input"/>
+<input id="phone" type="text" placeholder="Êîíòàêòíûé òåëåôîí" class="text-input"/>
+<input id="email" type="text" placeholder="Ýëåêòðîííàÿ ïî÷òà" class="" />
+<br>
+<textarea id="question" placeholder="Àäðåñ"></textarea>
+</form>
+<button onclick="cart.sendOrder('formToSend,overflw,bsum');" href="#">Îòïðàâèòü çàêàç</button>
+</div>
+<!----------------------------------------------------->
+
+<script>
+var cart;
+var config;
+var wiNumInputPrefID;
+/* WI-GLOBAL-VARS */
+$(document).ready(function(){  
+    cart = new WICard("cart");
+    config = {'clearAfterSend':true, 'showAfterAdd':false};
+    
+    cart.init("basketwidjet", config);
+    /* WI-MODULES */
+    
+    
+});	
+document.addEventListener('visibilitychange', function(e) {
+cart.init("basketwidjet", config);
+}, false);
+</script>
+		<div class="top">
+			<div class="name">Buon appetito!</div>
+			<div class="main-menu1">
+				<ul class="main-menu2">
+					<li style="margin-left:44px"><a href="Ãëàâíàÿ(ñàéò).html">Ãëàâíàÿ</a></li> 
+					<li>
+						<a href="">Ìåíþ</a>
+						<ul class="submenu">
+							<li><a href="Ïèööà(ñàéò).html">Ïèööà</a></li>
+							<li><a href="Çàêóñêè(ñàéò).html">Çàêóñêè</a></li>
+							<li><a href="Íàïèòêè(ñàéò).html">Íàïèòêè</a></li>
+						</ul>
+					</li>
+					<li><a href="Äîñòàâêà(ñàéò).html">Äîñòàâêà</a></li>
+					<li><a href="Êîíòàêòû(ñàéò).html">Êîíòàêòû</a></li>
+					<li><a href="Ôîòîãàëåðåÿ(ñàéò).html">Ôîòîãàëåðåÿ</a></li>
+					<li><a href="Àêöèè(ñàéò).html">Àêöèè</a></li>
+					
+					<li>
+						<a href="Ðåãèñòðàöèÿ(ñàéò).html">Ðåãèñòðàöèÿ</a>
+						<ul class="submenu">
+							<li><a href="Àâòîðèçàöèÿ.html">Àâòîðèçàöèÿ</a></li>
+						
+						</ul>
+					</li>
+					<li><a href="Âàêàíñèè(ñàéò).html">Âàêàíñèè</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="table">
+			<table>
+				<tr>
+					<td class="pic"><img src="https://oop.pizzahut.ru/product_pics/main//1/e90abec3d943811542f4f20a5109c1f7.png" width="95%" height="20%"></td>
+					<td><b>Öåçàðü</b><br>Íåæíîå êóðèíîå ôèëå, ïîäæàðèñòûé áåêîí, ìîöàðåëëà è ëåãêèé áåëûé ñîóñ «Öåçàðü» — íîâîå, äåëèêàòíîå ïðî÷òåíèå ïèööû. 
+					Ñàìàÿ ñâåæàÿ âåñåííÿÿ íîâèíêà â Pizza Hut. Ïèööà ïîäàåòñÿ ñî ñâåæèìè ëèñòüÿìè ñàëàòà «Àéñáåðã».<br><b>449p</b><div class="v">
+<!-- WI-VETRINE[002] -->	
+<button id="wicartbutton_006" onclick="cart.addToCart(this, '006', priceList['006'])">Äîáàâèòü â êîðçèíó</button>
+</div></td>
+				</tr>
+				<tr>
+					<td class="pic"><img src="https://oop.pizzahut.ru/product_pics/main//1/c78d7617b051f07077317e879ddb291c.png" width="95%" height="20%"></td>
+					<td><b>Ïåïïåðîíè</b><br>Â ýòîé ïèööå â äâà ðàçà áîëüøå èòàëüÿíñêèõ êîëáàñîê, ÷åì â ëþáîé äðóãîé. 
+					Âêóñ ýòîé â ìåðó îñòðîé è ñóïåðñûòíîé ïèööû óäîâëåòâîðèò ëþáîãî, äàæå ñàìîãî ïðèäèð÷èâîãî ãóðìàíà. 
+					Çíàòîêè ïèööû ðåêîìåíäóþò äîáàâèòü ê ïèööå ìèêñ èç îâîùåé.<br><b>399p</b><div class="v">
+<!-- WI-VETRINE[002] -->	
+<button id="wicartbutton_007" onclick="cart.addToCart(this, '007', priceList['007'])">Äîáàâèòü â êîðçèíó</button>
+</div></td>
+				</tr>
+				<tr>
+					<td class="pic"><img src="https://oop.pizzahut.ru/product_pics/main//1/4a80891392b3d9767e7be101f2fa7b1f.png" width="95%" height="20%"></td>
+					<td><b>Ãàâàéñêàÿ</b><br>Ñêàæè «àëîõà!» îäíîé èç ïîïóëÿðíûõ àìåðèêàíñêèõ ïèöö. Ïèêàíòíîñòü ýòîé ïèööå ïðèäàåò ñî÷åòàíèå ñî÷íîé êóðèíîé 
+					ãðóäêè è ñîëíå÷íûõ êóñî÷êîâ àíàíàñîâ. Ðåêîìåíäóåì òàêæå äîáàâèòü â ïèööó èíòåðåñíóþ âêóñîâóþ íîòó — îëèâêè.<br><b>399p</b><div class="v">
+<!-- WI-VETRINE[002] -->	
+<button id="wicartbutton_008" onclick="cart.addToCart(this, '008', priceList['008'])">Äîáàâèòü â êîðçèíó</button>
+</div></td>
+				</tr>
+				<tr>
+					<td class="pic"><img src="https://oop.pizzahut.ru/product_pics/main//1/25801365c228254ad37a39218def1c75.png" width="95%" height="20%"></td>
+					<td><b>Ëþáèòåëè îâîùåé</b><br>Ëþáèòåëè îâîùåé íå îñòàíóòñÿ ãîëîäíûìè, çàêàçàâ ýòó ïèööó. Îáèëèå ñâåæèõ îâîùåé — âîò ñåêðåò ýòîé ïèööû. 
+					Íàø øåô-ïîâàð ñîâåòóåò òåì, êòî ëþáèò «ïîãîðÿ÷åå», äîáàâèòü ìåêñèêàíñêèé ïåð÷èê õàëàïåíüî.<br><b>399p</b><div class="v">
+<!-- WI-VETRINE[002] -->	
+<button id="wicartbutton_009" onclick="cart.addToCart(this, '009', priceList['009'])">Äîáàâèòü â êîðçèíó</button>
+</div></td>
+				</tr>
+				<tr>
+					<td class="pic"><img src="https://oop.pizzahut.ru/product_pics/main//1/471c1ee32cb3cbf747491b1b16ace03a.png" width="95%" height="20%"></td>
+					<td><b>Ìàðãàðèòà</b><br>Áîëüøå âêóñà è åùå áîëüøå ñâåæåñòè â êëàññè÷åñêèé ðåöåïò — ýòî ìàðãàðèòà îò Pizza Hut! 
+					Ïîïðîáóé ñïåëûé òîìàò è äâîéíîé ñëîé ìîöàðåëëû íà íàøåì ôèðìåííîì òåñòå!<br><b>299p</b><div class="v">
+<!-- WI-VETRINE[002] -->	
+<button id="wicartbutton_010" onclick="cart.addToCart(this, '010', priceList['010'])">Äîáàâèòü â êîðçèíó</button>
+</div></td>
+				</tr>
+			</table>
+		</div>		
+			
+	</body>
+</html>
