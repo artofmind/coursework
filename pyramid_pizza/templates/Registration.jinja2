@@ -1,0 +1,55 @@
+{% extends "Main.html" %}
+{% block title %}Registration{% endblock %}
+{% block backscript %}
+<script type="text/javascript">
+
+</script>
+          <script src="Скрипты(сайт).js"></script>
+		      <title>Пиццерия «Buon appetito!»</title>
+{% endblock %}
+{% block pagetext %}
+		<div class="top">
+			<div class="name">Buon appetito!</div>
+			<div class="main-menu1">
+				<ul class="main-menu2">
+					<li style="margin-left:44px"><a href="Главная(сайт).html">Главная</a></li> 
+					<li>
+						<a href="">Меню</a>
+						<ul class="submenu">
+							<li><a href="Пицца(сайт).html">Пицца</a></li>
+							<li><a href="Закуски(сайт).html">Закуски</a></li>
+							<li><a href="Напитки(сайт).html">Напитки</a></li>
+						</ul>
+					</li>
+					<li><a href="Доставка(сайт).html">Доставка</a></li>
+					<li><a href="Контакты(сайт).html">Контакты</a></li>
+					<li><a href="Фотогалерея(сайт).html">Фотогалерея</a></li>
+					<li><a href="Акции(сайт).html">Акции</a></li>
+					
+					<li>
+						<a href="Регистрация(сайт).html">Регистрация</a>
+						<ul class="submenu">
+							<li><a href="Авторизация.html">Авторизация</a></li>
+						
+						</ul>
+					</li>
+					<li><a href="Вакансии(сайт).html">Вакансии</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="registry">
+			<h1>Регистрация</h1>
+			<form action="" method="post" name="send_info">
+				<label for="login">Ваш логин (email):</label>
+				<br><input type="text" name="login" id="login">
+				<div id='message1'>Неверный ввод данных адреса почты!</div>
+				<br><label for="password">Пароль:</label>
+				<br><input type="password" name="password" id="password">
+				<div id='message'>Пароль содержит недопустимые символы!</div>
+				<br><label for="info-field">Информация о себе:</label>
+				<br><textarea name="info-field" id="info-field" rows="3"></textarea>
+				<br><input type="checkbox" checked>Подписаться на рассылку
+				<br><input type="button" value="Зарегистрироваться" onclick="send('send_info')">
+			</form>
+		</div>		
+{% endblock %}
