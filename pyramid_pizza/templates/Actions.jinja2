@@ -1,11 +1,13 @@
-<!DOCTYPE html>
-	<head>
-		<meta http-equiv="Content-Type" content="text/html"; charset="utf-8" > 
+{% extends "Main.html" %}
+{% block title %}Actions{% endblock %}
+{% block backscript %}
+<script type="text/javascript">
+	
+</script>
 		<link href="Внешние стили(сайт).css" rel="stylesheet">
-		<script src="Скрипты(сайт).js"></script>
 		<title>Пиццерия «Buon appetito!»</title>
-	</head>
-	<body>
+{% endblock %}
+{% block pagetext %}
 		<div class="top">
 			<div class="name">Buon appetito!</div>
 			<div class="main-menu1">
@@ -23,12 +25,10 @@
 					<li><a href="Контакты(сайт).html">Контакты</a></li>
 					<li><a href="Фотогалерея(сайт).html">Фотогалерея</a></li>
 					<li><a href="Акции(сайт).html">Акции</a></li>
-					
 					<li>
 						<a href="Регистрация(сайт).html">Регистрация</a>
 						<ul class="submenu">
 							<li><a href="Авторизация.html">Авторизация</a></li>
-						
 						</ul>
 					</li>
 					<li><a href="Вакансии(сайт).html">Вакансии</a></li>
@@ -44,6 +44,5 @@
 			<p id="button" onclick="op_act2()">Подробнее</p>
 			<p  id="action2">Зарегистрируйся на нашем сайте, подключи рассылку и получи код на 2 пицца-ролла при заказе на любую сумму! Акция действует 
 			до 31.12.15 и не суммируется с другими предложениями.</p>
-		</div>		
-			</body>
+		</div>	
 {% endblock %}
