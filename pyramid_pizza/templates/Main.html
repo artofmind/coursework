@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link href="Внешние стили(сайт).css" rel="stylesheet">
+			<link href="wicart.css" rel="stylesheet">
+		<script src="Скрипты(сайт).js"></script>
+		<title>Пиццерия «Buon appetito!»</title>
+		<script src="wicart.js"  type="text/javascript" ></script>
+		<script src="http://code.jquery.com/jquery-1.11.0.min.js" type="text/javascript" ></script>
+	</head>
+	<body>  <script>
+var priceList = {
+	"001" : {"id" : "001", "subid" : {}, "name" : "IPhone 5", "price" : "20500"},
+	"002" : {"id" : "002", "subid" : {}, "name" : "IPad MINI", "price" : "10500"}
+	};
+</script>	
+	<div class="cart">
+<div class="price"><a href="#" id="basketwidjet" onclick="cart.showWinow('bcontainer', 1)"></a></div>
+
+<div style="text-align: center"><a href="#!" onclick="cart.clearBasket()">Очистить корзину</a></div>
+
+</div>
+<!-- WI-BASKET -->
+
+
+<!---Форма для магазина-------------------------------->
+<div id="order" class="popup">
+<a href="#" onclick="cart.closeWindow('order', 0)" style="float:right">[закрыть]</a>
+<h4>Введите ваши контактные данные</h4>
+
+<form id="formToSend">
+<input id="fio" type="text" placeholder="Ваши фамилия и имя"  class="" />
+<input id="city" type="text" placeholder="Город"  class="text-input"/>
+<input id="phone" type="text" placeholder="Контактный телефон" class="text-input"/>
+<input id="email" type="text" placeholder="Электронная почта" class="" />
+<br>
+<textarea id="question" placeholder="Адрес"></textarea>
+</form>
+<button onclick="cart.sendOrder('formToSend,overflw,bsum');" href="#">Отправить заказ</button>
+</div>
+<!----------------------------------------------------->
+<script>
+var cart;
+var config;
+var wiNumInputPrefID;
+/* WI-GLOBAL-VARS */
+$(document).ready(function(){  
+    cart = new WICard("cart");
+    config = {'clearAfterSend':true, 'showAfterAdd':false};
+    
+    cart.init("basketwidjet", config);
+    /* WI-MODULES */
+    
+    
+});	
+document.addEventListener('visibilitychange', function(e) {
+cart.init("basketwidjet", config);
+}, false);
+</script>
+		<div class="top">
+			<div class="name">Buon appetito!</div>
+			<div class="main-menu1">
+				<ul class="main-menu2">
+					<li style="margin-left:44px"><a href="">Главная</a></li> 
+					<li>
+						<a href="">Меню</a>
+						<ul class="submenu">
+							<li><a href="Пицца(сайт).html">Пицца</a></li>
+							<li><a href="Закуски(сайт).html">Закуски</a></li>
+							<li><a href="Напитки(сайт).html">Напитки</a></li>
+						</ul>
+					</li>
+					<li><a href="Доставка(сайт).html">Доставка</a></li>
+					<li><a href="Контакты(сайт).html">Контакты</a></li>
+					<li><a href="Фотогалерея(сайт).html">Фотогалерея</a></li>
+					<li><a href="Акции(сайт).html">Акции</a></li>
+					
+					<li>
+						<a href="Регистрация(сайт).html">Регистрация</a>
+						<ul class="submenu">
+							<li><a href="Авторизация.html">Авторизация</a></li>
+						
+						</ul>
+					</li>
+					<li><a href="Вакансии(сайт).html">Вакансии</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class='text'>
+			<p>Когда вокруг пульсирует город, особенно приятно ощутить тепло и уют деревянных стен настоящего итальянского заведения. 
+			Пиццерия <i><b>«Buon appetito!»</b></i> - это островок солнечной Тосканы. Очутившись в этом удивительном тихом итальянском мире, 
+			сразу понимаешь, что нет ничего дороже этого тепла, заботы сервиса и ненавязчивого внимания к каждому клиенту.</p> 
+			<p>Итальянцы всегда понимали суть приготовления вкусной и полезной пищи, команда пиццерии <i><b>«Buon appetito!»</b></i> 
+			также постаралась в наших салатах, пастах, закусках и других прекрасных средиземноморских блюдах передать всю гамму 
+			разнообразия вкусовых ощущений, по достоинству оценить которые вы сможете, лишь посетив наш ресторан. </p>
+		</div>
+		<div class='basement'><p>Приходите к нам! С Вас аппетит и хорошее настроение, а с нас - вкуснейшая еда, уют и живая музыка!</p></div>
+	</body>
+</html> 
