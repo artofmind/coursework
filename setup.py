@@ -33,7 +33,7 @@ setup(name='pyramid_pizza',
       install_requires=requires,
       entry_points="""\
       [paste.app_factory]
-      main = pyramid_blogr:main
+      main = pyramid_pizza:main
       [console_scripts]
       initialize_pyramid_pizza_db = pyramid_pizza.scripts.initdb:main
       """,
