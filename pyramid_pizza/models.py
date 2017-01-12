@@ -1,36 +1,27 @@
 from sqlalchemy import Column, Index,Integer,Text, create_engine, ForeignKey, DateTime, Integer, Unicode, UnicodeText
-from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.orm import sessionmaker
+from sqlalchemy.orm import sessionmaker, scoped_session
 from zope.sqlalchemy import ZopeTransactionExtension
-from pyramid_sqlalchemy import BaseObject
-from wsgiref.simple_server import make_server
-from pyramid.config import Configurator
-from sqlalchemy.orm import backref, relationship
+from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.orm import relationship, backref
 
-engine = create_engine('sqlite:///base.db')
-Session = sessionmaker(bind=engine,extension=ZopeTransactionExtension()))
+DBSession = scoped_session(sessionmaker(extension=ZopeTransactionExtension()))
 Base = declarative_base()
 
-association_table = Table('association', Base.metadata,
- Column('id_Order', Integer, ForeignKey('Order.id_order')),
- Column('id_Tovar', Integer, ForeignKey('OTovar.id_Tovar')
-)
 
-
-class User(BaseObject):
+class User(Base):
     __tablename__ = 'user'
     id_User = Column(Integer, primary_key=True)
     name_User = Column(Unicode(255), nullable=False)
     lastname_User = Column(Unicode(255), nullable=False)
     email = Column(Unicode(255), unique=True, nullable=False)
 
-class Tovar(BaseObject):
+class Tovar(Base):
     __tablename__ = 'tovar'
     id_Tovar = Column(Integer, primary_key=True)
     name_Tovar = Column(Unicode(255), unique=True, nullable=False)
     price_Tovar = Column(Integer)
 
-class Order(BaseObject):
+class Order(Base):
     __tablename__ = 'order'
     id_Order = Column(Integer, primary_key=True)
     Tovars = relationship("Tovar",
