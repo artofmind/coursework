@@ -1,4 +1,4 @@
-pyramid_pizza README
+pizza README
 ==================
 
 Getting Started
@@ -6,8 +6,9 @@ Getting Started
 
 - cd <directory containing this file>
 
-- $/bin/python setup.py develop
+- $VENV/bin/python setup.py develop
 
-- $/bin/initialize_pyramid_pizza_db dev.ini
+- $VENV/bin/initialize_pizza_db development.ini
 
-- $/bin/pserve dev.ini
+- $VENV/bin/pserve development.ini
+

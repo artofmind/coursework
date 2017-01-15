@@ -2,39 +2,48 @@ import os
 
 from setuptools import setup, find_packages
 
-Area = os.path.abspath(os.path.dirname(__file__))
-with open(os.path.join(Area, 'README.txt')) as f:
+here = os.path.abspath(os.path.dirname(__file__))
+with open(os.path.join(here, 'README.txt')) as f:
     README = f.read()
+with open(os.path.join(here, 'CHANGES.txt')) as f:
+    CHANGES = f.read()
 
 requires = [
     'pyramid',
-    'pyramid_chameleon',
+    'pyramid_jinja2',
     'pyramid_debugtoolbar',
-    'pyramid_tm',
-    'SQLAlchemy',
-    'transaction',
-    'zope.sqlalchemy']
+    'waitress',
+    ]
 
-setup(name='pyramid_pizza',
+tests_require = [
+    'WebTest >= 1.3.1',  # py3 compat
+    'pytest',  # includes virtualenv
+    'pytest-cov',
+    ]
+
+setup(name='pizza',
       version='0.0',
-      description='pyramid_pizza',
+      description='pizza site',
       long_description=README + '\n\n' + CHANGES,
       classifiers=[
-        "Programming Language :: Python",
-        "Framework :: Pyramid",
-        "Topic :: Internet :: WWW/HTTP",
-        "Topic :: Internet :: WWW/HTTP :: WSGI :: Application",
-        ],
-      author='Ovchinnickova and Taranenko',
+          "Programming Language :: Python",
+          "Framework :: Pyramid",
+          "Topic :: Internet :: WWW/HTTP",
+          "Topic :: Internet :: WWW/HTTP :: WSGI :: Application",
+      ],
+      author='Taranenko and Ovchinnickova',
+      author_email='',
+      url='',
+      keywords='web pyramid pylons',
       packages=find_packages(),
       include_package_data=True,
       zip_safe=False,
-      test_suite='pyramid_pizza',
+      extras_require={
+          'testing': tests_require,
+      },
       install_requires=requires,
       entry_points="""\
       [paste.app_factory]
-      main = pyramid_pizza:main
-      [console_scripts]
-      initialize_pyramid_pizza_db = pyramid_pizza.scripts.initdb:main
+      main = pizza:main
       """,
       )
