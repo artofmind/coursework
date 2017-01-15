@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{% extends "base.jinja2" %}
+{% block page %}
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html"; charset="utf-8" > 
+		<link href="Внешние стили(сайт).css" rel="stylesheet">
+		<script src="Скрипты(сайт).js"></script>
+		<title>Пиццерия «Buon appetito!»</title>
+	</head>
+	<body>
+
+		<div class="registry">
+			<h1>Регистрация</h1>
+			<form action="" method="post" name="send_info">
+				<label for="login">Ваш логин (email):</label>
+				<br><input type="text" name="login" id="login">
+				<div id='message1'>Неверный ввод данных адреса почты!</div>
+				<br><label for="password">Пароль:</label>
+				<br><input type="password" name="password" id="password">
+				<div id='message'>Пароль содержит недопустимые символы!</div>
+				<br><label for="info-field">Информация о себе:</label>
+				<br><textarea name="info-field" id="info-field" rows="3"></textarea>
+				<br><input type="checkbox" checked>Подписаться на рассылку
+				<br><input type="button" value="Зарегистрироваться" onclick="send('send_info')">
+			</form>
+		</div>		
+			
+	</body>
+</html>
+{% endblock %}

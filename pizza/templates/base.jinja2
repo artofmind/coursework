@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Пиццерия "Boun appetito!"</title>
+		<meta charset="utf-8">
+		<link href="static/css/Styles.css" type="text/css" rel="stylesheet"/>
+		<script src="static/js/wicart.js" type="text/javascript"></script>
+		<script src="static/js/Scripts.js" type="text/javascript"></script>
+	</head>
+	<body>
+		<div class="cart">
+			<div class="price"><a href="#" id="basketwidjet" onclick="cart.showWinow('bcontainer', 1)"></a></div>
+			<div style="text-align: center"><a href="#!" onclick="cart.clearBasket()">Очистить корзину</a></div>
+		</div>
+
+	<!-- WI-BASKET -->
+
+	<!---Форма для магазина-------------------------------->
+		<div id="order" class="popup">
+			<a href="#" onclick="cart.closeWindow('order', 0)" style="float:right">[закрыть]</a>
+			<h4>Введите ваши контактные данные</h4>
+			<form id="formToSend">
+				<input id="fio" type="text" placeholder="Ваши фамилия и имя"  class="" />
+				<input id="city" type="text" placeholder="Город"  class="text-input"/>
+				<input id="phone" type="text" placeholder="Контактный телефон" class="text-input"/>
+				<input id="email" type="text" placeholder="Электронная почта" class="" />
+				<br>
+				<textarea id="question" placeholder="Адрес"></textarea>
+			</form>
+			<button onclick="cart.sendOrder('formToSend,overflw,bsum');" href="#">Отправить заказ</button>
+		</div>
+		<!----------------------------------------------------->
+		<script>
+			var cart;
+			var config;
+			var wiNumInputPrefID;
+			/* WI-GLOBAL-VARS */
+			$(document).ready(function(){
+				cart = new WICard("cart");
+				config = {'clearAfterSend':true, 'showAfterAdd':false};
+
+				cart.init("basketwidjet", config);
+				/* WI-MODULES */
+
+
+			});
+			document.addEventListener('visibilitychange', function(e) {
+			cart.init("basketwidjet", config);
+			}, false);
+		</script>
+		<div class="top">
+			<div class="name">Buon appetito!</div>
+			<div class="main-menu1">
+				<ul class="main-menu2">
+					<li style="/"><a href="">Главная</a></li>
+					<li>
+						<a href="">Меню</a>
+						<ul class="submenu">
+							<li><a href="pizza">Пицца</a></li>
+							<li><a href="snacks">Закуски</a></li>
+							<li><a href="drinks">Напитки</a></li>
+						</ul>
+					</li>
+					<li><a href="delivery">Доставка</a></li>
+					<li><a href="contacts">Контакты</a></li>
+					<li><a href="photo">Фотогалерея</a></li>
+					<li><a href="actions">Акции</a></li>
+					<li>
+						<a href="register">Регистрация</a>
+						<ul class="submenu">
+							<li><a href="logIn">Авторизация</a></li>
+						</ul>
+					</li>
+					<li><a href="vacations">Вакансии</a></li>
+				</ul>
+			</div>
+		</div>
+		<div>{% block page %}{% endblock %}</div>
+	</body>
+</html>
+

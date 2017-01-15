@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+{% extends "base.jinja2" %}
+{% block page %}
+	<script>
+var priceList = {
+	"001" : {"id" : "001", "subid" : {}, "name" : "Пицца-ролл", "price" : "99"},
+	"002" : {"id" : "002", "subid" : {}, "name" : "Картофельные дольки", "price" : "124"},
+	"003" : {"id" : "003", "subid" : {}, "name" : "Салат Цезарь", "price" : "299"},
+	"004" : {"id" : "004", "subid" : {}, "name" : "Чесночный хлеб", "price" : "119"},
+	"005" : {"id" : "005", "subid" : {}, "name" : "Куриные стрипсы", "price" : "149"},
+	"006" : {"id" : "006", "subid" : {}, "name" : "Цезарь", "price" : "449"},
+	"007" : {"id" : "007", "subid" : {}, "name" : "Пепперони", "price" : "399"},
+	"008" : {"id" : "008", "subid" : {}, "name" : "Гавайская", "price" : "399"},
+	"009" : {"id" : "009", "subid" : {}, "name" : "Любители овощей", "price" : "399"},
+	"010" : {"id" : "010", "subid" : {}, "name" : "Маргарита", "price" : "299"},
+	};
+</script>
+                <div class="table">
+			<table>
+				<tr>
+					<td class="pic"><img src="https://oop.pizzahut.ru/product_pics/main//1/e90abec3d943811542f4f20a5109c1f7.png" width="95%" height="20%"></td>
+					<td><b>Цезарь</b><br>Нежное куриное филе, поджаристый бекон, моцарелла и легкий белый соус «Цезарь» — новое, деликатное прочтение пиццы.
+					Самая свежая весенняя новинка в Pizza Hut. Пицца подается со свежими листьями салата «Айсберг».<br><b>449p</b><div class="v">
+<!-- WI-VETRINE[002] -->
+<button id="wicartbutton_006" onclick="cart.addToCart(this, '006', priceList['006'])">Добавить в корзину</button>
+</div></td>
+				</tr>
+				<tr>
+					<td class="pic"><img src="https://oop.pizzahut.ru/product_pics/main//1/c78d7617b051f07077317e879ddb291c.png" width="95%" height="20%"></td>
+					<td><b>Пепперони</b><br>В этой пицце в два раза больше итальянских колбасок, чем в любой другой.
+					Вкус этой в меру острой и суперсытной пиццы удовлетворит любого, даже самого придирчивого гурмана.
+					Знатоки пиццы рекомендуют добавить к пицце микс из овощей.<br><b>399p</b><div class="v">
+<!-- WI-VETRINE[002] -->
+<button id="wicartbutton_007" onclick="cart.addToCart(this, '007', priceList['007'])">Добавить в корзину</button>
+</div></td>
+				</tr>
+				<tr>
+					<td class="pic"><img src="https://oop.pizzahut.ru/product_pics/main//1/4a80891392b3d9767e7be101f2fa7b1f.png" width="95%" height="20%"></td>
+					<td><b>Гавайская</b><br>Скажи «алоха!» одной из популярных американских пицц. Пикантность этой пицце придает сочетание сочной куриной
+					грудки и солнечных кусочков ананасов. Рекомендуем также добавить в пиццу интересную вкусовую ноту — оливки.<br><b>399p</b><div class="v">
+<!-- WI-VETRINE[002] -->
+<button id="wicartbutton_008" onclick="cart.addToCart(this, '008', priceList['008'])">Добавить в корзину</button>
+</div></td>
+				</tr>
+				<tr>
+					<td class="pic"><img src="https://oop.pizzahut.ru/product_pics/main//1/25801365c228254ad37a39218def1c75.png" width="95%" height="20%"></td>
+					<td><b>Любители овощей</b><br>Любители овощей не останутся голодными, заказав эту пиццу. Обилие свежих овощей — вот секрет этой пиццы.
+					Наш шеф-повар советует тем, кто любит «погорячее», добавить мексиканский перчик халапеньо.<br><b>399p</b><div class="v">
+<!-- WI-VETRINE[002] -->
+<button id="wicartbutton_009" onclick="cart.addToCart(this, '009', priceList['009'])">Добавить в корзину</button>
+</div></td>
+				</tr>
+				<tr>
+					<td class="pic"><img src="https://oop.pizzahut.ru/product_pics/main//1/471c1ee32cb3cbf747491b1b16ace03a.png" width="95%" height="20%"></td>
+					<td><b>Маргарита</b><br>Больше вкуса и еще больше свежести в классический рецепт — это маргарита от Pizza Hut!
+					Попробуй спелый томат и двойной слой моцареллы на нашем фирменном тесте!<br><b>299p</b><div class="v">
+<!-- WI-VETRINE[002] -->
+<button id="wicartbutton_010" onclick="cart.addToCart(this, '010', priceList['010'])">Добавить в корзину</button>
+</div></td>
+				</tr>
+			</table>
+		</div>
+{% endblock %}
