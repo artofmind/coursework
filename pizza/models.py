@@ -15,35 +15,32 @@ class User(Base):
      Login = Column(String, nullable = False,primary_key = True)
      Password = Column(String, nullable = False)
      Mail = Column(String, nullable = False)
-     FirstName = Column(String, nullable = False)
-     SecondName = Column(String, nullable = False)
+     
+    
      def __init__(self, Login, Password, Mail, FirstName, SecondName):
           self.Login = Login
           self.Password = Password
           self.Mail = Mail
-          self.FirstName = FirstName
-          self.SecondName = SecondName
+         
 
      def __repr__(self):
-          return self.Login + " " + self.Password + " " + self.Mail + " " +self.FirstName
+          return self.Login + " " + self.Password + " " + self.Mail 
 
 class Admins(Base):
      __tablename__ = "Admins"
      Login = Column(String, nullable = False,primary_key = True)
      Password = Column(String, nullable = False)
      Mail = Column(String, nullable = False)
-     FirstName = Column(String, nullable = False)
-     SecondName = Column(String, nullable = False)
+     
 
      def __init__(self, Login, Password, Mail, FirstName, SecondName):
           self.Login = Login
           self.Password = Password
           self.Mail = Mail
-          self.FirstName = FirstName
-          self.SecondName = SecondName
+        
 
      def __repr__(self):
-          return self.Login + " " + self.Password + " " + self.Mail + " " +self.FirstName + " " + self.SecondName
+          return self.Login + " " + self.Password + " " + self.Mail
 
 
 class Tovar(Base):
