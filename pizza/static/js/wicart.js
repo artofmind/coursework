@@ -339,4 +339,3 @@ function WICard(obj, plugins)
 	return copyForm.innerHTML;
 		}
 	}
-	
