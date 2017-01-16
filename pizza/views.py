@@ -82,13 +82,13 @@ def register(request):
 			return { 'errors' : errors ,
 					 'name' : request.params['name'],
 					 'login' : request.params['login'],
-					 'mail' : request.params['mail'],
+					 'mail' : request.params['mail']
 					
 		else:
 			new_user = User(request.params['login'],
 							request.params['password'],
 							request.params['mail'],
-							request.params['name'],
+							request.params['name']
 							
 			session.add(new_user)
 			session.commit()
