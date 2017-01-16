@@ -83,14 +83,13 @@ def register(request):
 					 'name' : request.params['name'],
 					 'login' : request.params['login'],
 					 'mail' : request.params['mail'],
-					 'secondName' : request.params['secondName'],
-					 'username': request.authenticated_userid }
+					
 		else:
 			new_user = User(request.params['login'],
 							request.params['password'],
 							request.params['mail'],
 							request.params['name'],
-							request.params['secondName']);
+							
 			session.add(new_user)
 			session.commit()
 			return HTTPFound(location = request.route_url('goodReg', goodReg='great', _query={'login' : request.params['login']}))
